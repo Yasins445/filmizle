@@ -1,0 +1,12 @@
+
+{% load static %}
+
+<div class="card bg-dark" style="width: 18rem;height: 100%;  ">
+    <img src="{{film.resim.url}}" class="card-img-top mt-3" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-light">{{film.film_adi}}</h5>
+      <p class="card-text text-light aciklamafilm">{{film.aciklama}}</p>
+      <a href="{% url 'filmdetay' film.slug %}" class="btn btn-danger text-center" style="width:100%;">FİLMİ İZLE</a>
+    </div>
+  </div> 
+  

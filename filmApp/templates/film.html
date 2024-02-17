@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+
+<h1 class="text-center text-light bg-black">Filmler</h1>
+
+
+<div class="container  bg-dark " style="height:100%;">
+    <div class="row">
+       {% include 'partials/_kategori.html' %}
+    
+    <div class="col-9">
+        <div class="row">
+            {% if filmler|length > 0 %}
+            
+          
+            {% for film in filmler %}
+             {% if film.anasayfa_goster %}
+             <div class="col-4">
+                {% include 'partials/_card.html' %}
+             </div>
+             {% endif%}
+             {% endfor%}
+             {% else %}
+             <h1 class="alert-warning text-light">
+                Film bulunamadı!
+             </h1>
+
+             {% endif %}
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+{% endblock content %}

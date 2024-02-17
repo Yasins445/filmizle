@@ -1,0 +1,13 @@
+.aciklamafilm{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.basebody{
+    background-image: url('/static/arkaplan/neon-22534_1280.jpg');
+}
+.arama{
+    color: aliceblue !important;
+}

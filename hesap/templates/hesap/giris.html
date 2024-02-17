@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block title %} {% endblock title %}
+
+{% block content %}
+<h1 class="text-white">GİRİŞ YAP</h1>
+
+
+<div class="mx-auto w-25 bg-black border border-info rounded">
+    
+    <h2 class="text-primary text-center">Giriş Yap</h2>
+    <form  method="POST" class="text-center">
+        {% csrf_token %}
+        {% if error %}
+         <div class="alert alert-danger">
+            {{error}}
+         </div>
+        {% endif %}
+        <label for="kullanici_adi" class="text-white">Kullanıcı adınızı girin</label><br>
+        <input type="text" name="kullanici_adi">
+        <hr>
+        <label for="sifre" class="text-white">şifrenizi girin</label><br>
+        <input type="password" name="sifre">
+        <hr>
+        <input type="submit" value="Giriş Yap" class="btn btn-primary">
+    
+    </form>
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

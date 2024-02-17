@@ -1,0 +1,21 @@
+{% load static %}
+
+
+<div class="col-3 mt-3">
+   
+    <ul class="list-group">
+        {% for kategori in kategoriler %}
+        {% if kategori.slug == secilen_film %}
+        <a href="{% url 'filmler_by_kategori' kategori.slug %}" class="list-group-item list-group-item-action active bg-black text-success">{{kategori.name}}</a>
+
+
+        {% else %}
+        <a href="{% url 'filmler_by_kategori' kategori.slug %}" class="list-group-item list-group-item-action  bg-black text-success">{{kategori.name}}</a>
+
+
+        {% endif %}
+        
+        {% endfor %}
+
+    </ul>
+</div>

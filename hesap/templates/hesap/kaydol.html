@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block title %} KAYIT OL{% endblock title %}
+
+{% block content %}
+
+<h2 class="text-primary text-center">Kayıt Ol</h2>
+
+<label for="kullanici_adi" class="text-white">Kullanıcı adınızı girin</label><br>
+<input type="text" name="kullanici_adi">
+<hr>
+<label for="posta" class="text-white">E-posta adresinizi girin</label><br>
+<input type="email" name="posta">
+<hr>
+<label for="sifre" class="text-white">şifrenizi girin</label><br>
+<input type="password" name="sifre">
+<hr>
+<input type="submit" value="Giriş Yap" class="btn btn-primary">
+
+{% endblock content %}

@@ -1,0 +1,55 @@
+<header >
+
+
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+          <a class="navbar-brand h1 text-primary " href="{% url 'index' %}">KAÇAKİZLE.COM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-primary" aria-current="page" href="{% url 'index' %}">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-primary" href="{% url 'film' %}">Filmler</a>
+              </li>
+             
+
+                
+            <form class="d-flex ms-5" role="search">
+              <input class="  arama  form-control ms-5 bg-black  " type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <li class="nav-item dropdown text-primary  ms-5">
+              <a class="nav-link dropdown-toggle text-primary me-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                hesap
+              </a>
+              <ul class="dropdown-menu bg-black text-primary">
+                {% if  user.is_authenticated %}
+                    <li><a class="dropdown-item text text-primary" href="#">hesabım</a></li>
+                    <li><a class="dropdown-item text text-primary" href="#">hesap yönetimi</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text text-primary" href="{% url 'cik' %}">çıkış yap</a></li>
+                    {% else %}
+                    <li><a class="dropdown-item text text-primary" href="{% url 'giris' %}">Giriş Yap</a></li>
+                    <li><a class="dropdown-item text text-primary" href="kaydol">Kayıt Ol</a></li>
+                {% endif%}
+              
+              </ul>
+            </li>
+              
+            </ul>
+
+
+           
+           
+
+          </div>
+        </div>
+      </nav>
+
+
+</header>

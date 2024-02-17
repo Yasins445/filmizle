@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+
+<h1 class="bg-black text-center text-light">Anasayfa <br>senin için önerilen</h1>
+
+
+
+<div class="container bg-dark " style="height:100%;">
+<div class="row">
+   
+
+    {% include 'partials/_kategori.html' %}
+
+
+<div class="col-9">
+    <div class="row">
+        {% for film in filmler %}
+         {% if film.anasayfa_goster %}
+         <div class="col-4">
+            {% include 'partials/_card.html' %}
+         </div>
+         <br>
+         {% endif%}
+         {% endfor%}
+    </div>
+</div>
+</div>
+</div>
+
+
+{% endblock content %}
